@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/photon.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="app.js"></script>
+    <script src="manageMQTT.js"></script>
+    <script src="connectSocket.js"></script>
+
+  </head>
+  <script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('currentHour').innerHTML =h + ":" + m;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    function setCurrentDate(){
+      var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+      var f=new Date();
+      var fecha = f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+      document.getElementById('currentDate').innerHTML = fecha;
+    }
+</script>
+  <body onload="startTime();setCurrentDate()">
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <!--header class="toolbar toolbar-header">
+        <h1 id="testTitle" class="title">Photon</h1>
+      </header-->
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="circle-hour">
+              <h2 id="currentHour" class="hour">17:54</h2>
+            </div>
+        <div class="pane-group">
+          <div class="pane">
+
+            <div class="notification-bar">
+              <div class="date-group">
+                <span id="currentDate" class="date">16 Enero 2016</span>
+              </div>
+              <div class="signal-icon-group">
+                <img class="signal-icon" src="images/signal.png" height="38">
+              </div>
+              <div class="battery">
+                <span class="battery-status">100%</span>
+                <img class="battery-icon" src="images/battery.png" height="38">
+              </div>
+            </div>
+            <div class="main-content">
+              <div class="main1">
+                <br>
+                <h1 class="unity">Unidad</h1>
+                <h1 class="unity bus-number">39</h1>
+                <div class="table-cont">
+                  <table class="bus-table" cellspacing="0">
+                    <tr class="bus-line">
+                      <td><img class="bus-icon" src="images/bus.svg" height="28"></td>
+                      <td class="time-relative">15min</td>
+                      <td class="other-bus-number"><span>Unidad 102</span></td>
+                      <td><img class="arrow-icon" src="images/up.png" height="28"></td>
+                    </tr>
+                    <tr class="bus-line">
+                      <td><img class="bus-icon" src="images/bus.svg" height="28"></td>
+                      <td class="time-relative">15min</td>
+                      <td class="other-bus-number"><span>Unidad 17</span></td>
+                      <td><img class="arrow-icon" src="images/down.png" height="28"></td>
+                    </tr>
+                    <tr class="bus-line">
+                      <td><img class="bus-icon" src="images/bus.svg" height="28"></td>
+                      <td  colspan="2" class="own-bus">Unidad 39</td>
+                      <td><img class="arrow-icon" src="images/yellow-circle.png" height="23"></td>
+                    </tr>
+                    <tr class="bus-line">
+                      <td><img class="bus-icon" src="images/bus.svg" height="28"></td>
+                      <td class="time-relative">15min</td>
+                      <td class="other-bus-number"><span>Unidad 97</span></td>
+                      <td><img class="arrow-icon" src="images/down.png" height="28"></td>
+                    </tr>
+                  </table>
+                </div>
+                <br>
+                <div class="cont">
+                  <div class="status">
+                    <span class="status-text">A TIEMPO</span>
+                  </div>
+                </div>
+              </div>
+              <div class="main2">
+                <br>
+                <img class="company-icon" src="images/logo_ecuatoriana.svg" height="50">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="time-distance">
+                  <div class="time-cont">
+                    <img src="images/reloj.png" height="30">
+                    <span id="currentTime" class="time">1:20</span>
+                  </div>
+                  <div class="distance-cont">
+                    <img src="images/gps.png" height="30">
+                    <!--span  id="distance" class="distance">3.3 km</span-->
+                  </div>
+                </div>
+                <br>
+                <div class="total-passengers">
+                    <span class="text-passengers">subida</span>
+                    <span id="countPersonUpDoor1" class="value-passengers">0</span><br>
+                    <span class="text-passengers">bajada</span>
+                    <span id="countPersonDownDoor1" class="value-passengers">0</span><br>
+                    <span class="text-passengers">Total</span>
+                    <span id="countPersonTotalDoor1" class="value-passengers">0</span><br>
+                  </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <img class="logo" src="images/logo.svg" height="88">
+      </div>
+    </div>
+  </body>
+</html>

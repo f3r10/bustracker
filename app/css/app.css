@@ -1,0 +1,259 @@
+.notification-bar {
+  display: block;
+  background: #797979;
+  min-width: 100%;
+  text-align: center;
+}
+
+.signal-icon-group,
+.battery-status,
+.battery,
+.date{
+  display: inline-block;
+
+}
+
+.battery-status{
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+.date-group{
+  display: inline-block;
+  width: 30%;
+  margin-left: 170px;
+}
+
+.date{
+  width: 60%;
+  margin: 0px;
+
+  min-height: 43px;
+  line-height: 35px;
+  font-size: 16px;
+  font-family: "brandon_bld";
+}
+
+.battery{
+  width: 22%;
+  text-align: left;
+}
+
+.battery-icon{
+  vertical-align: top;
+}
+
+.battery,
+.signal-icon-group{
+  float: right;
+}
+
+.signal-icon-group{
+  margin-right: 5px;
+}
+
+.circle-hour{
+  z-index: 1;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  float: left;
+  background: url("../images/hora.svg");
+  text-align: center;
+  /* width and height can be anything, as long as they're equal */
+}
+
+.hour{
+  font-weight: 700;
+  line-height: 2.1;
+}
+
+.pane2{
+  background: #1e1c1e;
+}
+
+.main-content{
+  display: block;
+  background: #1e1c1e;
+  min-height: 437px;
+}
+
+.main1,
+.main2{
+  position: absolute;
+  width: 50%;
+  display: inline-block;
+  background: #1e1c1e;
+  min-height: 437px;
+  text-align: center;
+}
+
+.main2{
+  width: 49%;
+  position: relative;
+  float: right;
+}
+
+.unity{
+  text-align: center;
+  color: #00b4e7;
+  font-size: 25px;
+  margin: 0px;
+}
+
+.bus-number{
+  margin-top: -40px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.unity,
+.status,
+.company-icon{
+  z-index: 1;
+  position: relative;
+ }
+
+.status{
+  background: #009f49;
+    border-radius: 10px;
+    border: 2px solid #00753c;
+    font-size: 35px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    padding: 2px 45px;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  width: 74%;
+  margin-left: 13%;
+  margin-right: 13%;
+  border-spacing: 0;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+td, th {
+    background-color: #04b5e7;
+    padding: 0px;
+}
+
+tr{
+  border-bottom: 1px solid #000000;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table tr:first-child td:first-child{
+    -moz-border-radius-topleft:10px;
+    -webkit-border-top-left-radius:10px;
+    border-top-left-radius:10px;
+}
+
+table tr:first-child td:last-child{
+    -moz-border-radius-topright:10px;
+    -webkit-border-top-right-radius:10px;
+    border-top-right-radius:10px;
+}
+
+table tr:last-child td:last-child {
+    -moz-border-radius-bottomright:10px;
+    -webkit-border-bottom-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+table tr:last-child td:first-child {
+    -moz-border-radius-bottomleft:10px;
+    -webkit-border-bottom-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+
+table tr:last-child td:last-child {
+    -moz-border-radius-bottomright:10px;
+    -webkit-border-bottom-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.other-bus-number,
+.bus-line{
+  padding: 0px 2px;
+}
+
+.arrow-icon{
+  margin-top: 3px;
+}
+
+.own-bus{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo{
+  position: fixed;
+  bottom: 28px;
+  right: 8px;
+}
+
+.time-cont {
+  color: white;
+  display: inline-block;
+  width: 58%;
+}
+
+.distance-cont{
+  color: white;
+  display: inline-block;
+  width: 28%;
+}
+
+.time-distance{
+  font-size: 35px;
+}
+
+.text-passengers{
+  color: #a3a3a2;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.value-passengers{
+  color: white;
+  font-size: 20px;
+}
+
+* {
+ font-family: "brandon_reg";
+}
+
+@font-face {
+  font-family: "brandon_bld";
+  src: url("../fonts/Brandon_bld.otf");
+  src: url("../fonts/Brandon_bld.otf") format("otf"), url("../fonts/Brandon_bld.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandon_reg";
+  src: url("../fonts/Brandon_reg.otf");
+  src: url("../fonts/Brandon_reg.otf") format("otf"), url("../fonts/Brandon_reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandon_light";
+  src: url("../fonts/Brandon_light.otf");
+  src: url("../fonts/Brandon_light.otf") format("otf"), url("../fonts/Brandon_light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
