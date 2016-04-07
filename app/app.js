@@ -7,7 +7,7 @@ import { remote } from 'electron'; // native electron module
 import jetpack from 'fs-jetpack'; // module loaded from npm
 import { greet } from './hello_world/hello_universe'; // code authored by you in this project
 import env from './env';
-var Timer = require('./node_modules/easytimer.js/dist/easytimer.min.js')
+//var Timer = require('./node_modules/easytimer.js/dist/easytimer.min.js')
 import mongoose from 'mongoose'
 
 import Cache from './cacheTest';

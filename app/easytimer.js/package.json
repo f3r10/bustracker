@@ -1,0 +1,52 @@
+{
+  "name": "easytimer.js",
+  "version": "1.0.0",
+  "description": "Easy to use Timer/Chronometer/Countdown compatible with AMD and NodeJS",
+  "main": "src/timer.js",
+  "directories": {
+    "test": "test",
+    "src": "src"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "amd",
+    "requirejs",
+    "timer",
+    "chronometer",
+    "countdown",
+    "mocha"
+  ],
+  "author": {
+    "name": "Albert Gonzalez"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sinon": "~1.10.3",
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.5.1"
+  },
+  "_id": "easytimer.js@1.0.0",
+  "dist": {
+    "shasum": "b38c45e1867ba08b67206dfe7c65b2a98368c9b1",
+    "tarball": "http://registry.npmjs.org/easytimer.js/-/easytimer.js-1.0.0.tgz"
+  },
+  "_from": "easytimer.js@>=1.0.0 <2.0.0",
+  "_npmVersion": "1.3.2",
+  "_npmUser": {
+    "name": "vacilone",
+    "email": "albert.glez.mld@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "vacilone",
+      "email": "albert.glez.mld@gmail.com"
+    }
+  ],
+  "_shasum": "b38c45e1867ba08b67206dfe7c65b2a98368c9b1",
+  "_resolved": "https://registry.npmjs.org/easytimer.js/-/easytimer.js-1.0.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

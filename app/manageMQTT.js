@@ -10,7 +10,7 @@ var shell = require('shelljs');
 var parseString = require('xml2js').parseString;
 import env from './env';
 
-var Timer = require('./node_modules/easytimer.js/dist/easytimer.min.js')
+var Timer = require('./easytimer.js/dist/easytimer.min.js')
 var client = redis.createClient();
 
 var allData;
