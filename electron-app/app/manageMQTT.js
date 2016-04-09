@@ -88,7 +88,10 @@ GPS action
 listener.watch({class: 'WATCH', json:true,  nmea: false});*/
 
 //console.log('Loaded environment variables:', env);
-initSendPosition();
+if (env.name === 'production') {
+    initSendPosition();
+}
+
 function stopSendPosition() {
   if(listener.isConnected()){
     listener.disconnect(function() {

@@ -7,3 +7,14 @@ Thumbs.db
 /build/
 /releases/
 /tmp/
+
+
+electron-app/node_modules
+electron-app/*.log
+electron-app/.DS_Store
+electron-app/Thumbs.db
+
+electron-app/app/spec.js
+electron-app/build/
+electron-app/releases/
+electron-app/tmp/

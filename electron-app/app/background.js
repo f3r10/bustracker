@@ -25,13 +25,10 @@ app.on('ready', function () {
         y: mainWindowState.y,
         width: mainWindowState.width,
         height: mainWindowState.height,
-        autoHideMenuBar: true,
-        fullscreen: true
+        autoHideMenuBar: true
     });
 
-    if (mainWindowState.isMaximized) {
-        mainWindow.maximize();
-    }
+    
 
     if (env.name === 'test') {
         mainWindow.loadURL('file://' + __dirname + '/spec.html');
@@ -39,24 +36,20 @@ app.on('ready', function () {
         mainWindow.loadURL('file://' + __dirname + '/app.html');
     }
 
+    if(env.name === 'production') {
+        mainWindow.setFullScreen(true);
+    }
+
     if (env.name !== 'production') {
         //devHelper.setDevMenu();
         mainWindow.openDevTools();
+        mainWindow.setFullScreen(false);
     }
 
     mainWindow.on('close', function () {
         mainWindowState.saveState(mainWindow);
     });
-    var icon = path.join(__dirname, 'logo.png')
-    appIcon = new Tray(icon);
-  var contextMenu = Menu.buildFromTemplate([
-    { label: 'Item1', type: 'radio' },
-    { label: 'Item2', type: 'radio' },
-    { label: 'Item3', type: 'radio', checked: true },
-    { label: 'Item4', type: 'radio' }
-  ]);
-  appIcon.setToolTip('This is my application.');
-  appIcon.setContextMenu(contextMenu);
+ 
 });
 
 app.on('window-all-closed', function () {
