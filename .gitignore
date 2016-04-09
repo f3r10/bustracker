@@ -18,3 +18,8 @@ electron-app/app/spec.js
 electron-app/build/
 electron-app/releases/
 electron-app/tmp/
+
+sensor-count/node_modules
+sensor-count/*.log
+sensor-count/.DS_Store
+sensor-count/Thumbs.db
